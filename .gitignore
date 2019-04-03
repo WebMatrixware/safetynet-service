@@ -14,6 +14,7 @@ daemon
 
 
 ## logs files and folders
+*.log
 logs
 **/logs
 
