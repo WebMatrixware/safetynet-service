@@ -1,0 +1,23 @@
+# Coverage output
+/coverage/
+/coverage/*
+/coverage/testoutput.html
+
+
+## Service daemon folder
+daemon
+**/daemon
+
+
+## .env environment config file
+.env
+
+
+## logs files and folders
+logs
+**/logs
+
+
+## node_modules folders, these can and should be rebuilt from a package.json.lock
+node_modules
+**/node_modules
