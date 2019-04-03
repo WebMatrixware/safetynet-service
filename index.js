@@ -1,6 +1,11 @@
 require('dotenv').config();
 
+const Cmdr = require('commander');
+const EventLogger = require('node-windows').EventLogger;
 const fs = require('fs');
+const Service = require('node-windows').Service;
+const Package = require('./package.json');
+const Path = require('path');
 const T = require('tracer').colorConsole({
   transport: (data) => {
 
@@ -21,3 +26,17 @@ const T = require('tracer').colorConsole({
     });
   }
 });
+
+const EL = new EventLogger('safetynet-service');
+const Svc = new Service({
+  name: Package.name + ' -v' + Package.version,
+  description: Package.description,
+  script: Path.join(__dirname, 'service.js')
+});
+
+Cmdr
+  .version(Package.version, '-v --version')
+  .parse(process.argv);
+
+
+Cmdr.outputHelp();
