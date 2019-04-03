@@ -4,8 +4,12 @@
   "description": "Mitel MiVoice Connect backup service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Ben Lanning <blanning@all-mode.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "tracer": "^0.9.8"
+  }
 }
