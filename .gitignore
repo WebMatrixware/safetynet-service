@@ -1,4 +1,7 @@
-# Coverage output
+## config.yml
+config.yml
+
+## Coverage output
 /coverage/
 /coverage/*
 /coverage/testoutput.html
